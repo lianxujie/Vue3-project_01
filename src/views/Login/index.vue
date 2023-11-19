@@ -1,19 +1,19 @@
-<template>
-    <div>
-我是登录页
+<script setup>
 
-    </div>
+</script>
+
+
+<template>
+<nav class="ap-topnav">
+  <div class="container">
+    <ul>
+      
+    </ul>
+  </div>
+</nav>
 </template>
 
-<script>
-export default {
-    setup () {
-        
 
-        return {}
-    } 
-}
-</script>
 
 <style lang="scss" scoped>
 
