@@ -1,5 +1,8 @@
 <script setup>
+
 import { useCategoryStore } from "@/stores/categoryStore";
+
+// 使用Pinia中的数据
 const categoryStore = useCategoryStore();
 </script>
 <template>

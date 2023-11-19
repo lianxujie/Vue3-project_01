@@ -6,7 +6,7 @@ import LayoutFooter from './components/LayoutFooter.vue'
 import LayoutFixed from './components/LayoutFixed.vue'
 
 
-//触发获取导航列表的action 
+//触发获取导航列表的action--- Pinia优化重复请求
 import { useCategoryStore } from '@/stores/categoryStore'
 import { onMounted } from 'vue'
 
