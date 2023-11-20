@@ -7,6 +7,8 @@ export function useBanner() {
 
     const getBanner = async () => {
         const res = await getBannerAPI({
+
+            //代表获取商品
             distributioSite:'2'
         })
         console.log(res)

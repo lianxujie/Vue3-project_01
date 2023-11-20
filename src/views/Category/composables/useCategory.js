@@ -8,6 +8,7 @@ import { onBeforeRouteUpdate } from 'vue-router'
 export function useCategory() {
     //获取分类数据--局部细化数据的api写在当前组件
     const categoryData = ref([])
+    //实例话路由实例，专门用来获取路由参数
     const route = useRoute()
     const getCategory = async (id = route.params.id) => {
         const res = await getCategoryAPI(id)

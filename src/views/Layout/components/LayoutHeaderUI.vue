@@ -12,6 +12,9 @@ const categoryStore = useCategoryStore();
     </li>
     <!-- 列表渲染 -->
     <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
+
+
+      <!-- Routerlink内置激活类名 -->
         <RouterLink  active-class="active" :to="`/category/${item.id}`">
         {{ item.name }}
         </RouterLink>
