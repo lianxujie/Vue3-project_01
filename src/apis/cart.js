@@ -2,7 +2,7 @@
 import request from '@/utils/http'
 
 //加入购物车
-export default insertCartAPI = ({
+export const insertCartAPI = ({
     skuId,count
 }) => {
     return request({
