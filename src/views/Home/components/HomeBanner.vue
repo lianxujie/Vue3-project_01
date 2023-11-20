@@ -1,4 +1,6 @@
 <script setup>
+
+//按需导入语法
 import { getBannerAPI } from '@/apis/home'
 import { onMounted, ref } from 'vue'
 

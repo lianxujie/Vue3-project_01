@@ -1,6 +1,6 @@
 
 <script setup>
-//定义props
+//定义props --可变参数
 defineProps({
     //主标题
     title: {
@@ -19,7 +19,7 @@ defineProps({
         <div class="head">
             <!-- 主标题和副标题 -->
             <h3>
-              {{title}}<small>{{ subTitle}}</small>
+              {{title}}<small>{{subTitle}}</small>
             </h3>
         </div>
         <!-- 主题内容区域 -->
