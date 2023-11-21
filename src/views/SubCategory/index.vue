@@ -33,11 +33,12 @@ onMounted(() => getGoodList())
 // tab切换回调
 
 const tabChange = () => {
-    console.log('tab切换了', reqData.value.sortField)
+    // console.log('tab切换了', reqData.value.sortField)
     reqData.value.page = 1
     getGoodList()
 }
 
+//无限滚动功能 
 //加载更多 
 const disabled = ref(false)
 const load = async () => {
@@ -66,11 +67,14 @@ const load = async () => {
       </el-breadcrumb>
     </div>
     <div class="sub-container">
+        <!-- 发生切换时,会将'name'的值存入v-model的binding中去 -->
       <el-tabs v-model="reqData.sortField" @tab-change="tabChange">
         <el-tab-pane label="最新商品" name="publishTime"></el-tab-pane>
         <el-tab-pane label="最高人气" name="orderNum"></el-tab-pane>
         <el-tab-pane label="评论最多" name="evaluateNum"></el-tab-pane>
       </el-tabs>
+
+      <!-- 配置v-infinite-scroll 监听滚动事件 -->
       <div class="body" v-infinite-scroll="load" :infinite-scroll-disabled="disabled">
         <!-- 商品列表-->
         <GoodsItem v-for="goods in goodList" :goods="goods" :key="goods.id" />
